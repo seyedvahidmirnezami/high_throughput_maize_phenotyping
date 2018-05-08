@@ -1,0 +1,49 @@
+{
+    "data_path": "/media/vahid/96CC807ACC805701/anthesis/data",
+    "data_path_test": "/media/vahid/96CC807ACC805701/anthesis/fasterRCNNTassel2016/Matchfeatures/19March/CAM483/cropped/right",
+    "name_model": "control_weights", 
+    "model": "cae",
+    "image_size": 256,
+    "patch_size": 256,
+    "verbosity": 5,
+
+    "train": {
+        "nb_epochs": 1,
+        "batch_size": 8,
+        "report_samples": 16,
+        "loss": "binary_crossentropy",
+        "optimizer": "adam",
+	
+        "num_gen": 4,
+        "preload_max": 16,
+
+        "img_folder": "images_prepped_train",
+        "img_ext": "JPG",
+        "lbl_folder": "annotations_prepped_train",
+        "lbl_ext": "png",
+        "percent_test_img": 10
+
+    },
+
+    "hyperparams": {
+        "in_ch": 3,
+        "out_ch": 1,
+        "num_filt": 64,
+        "dropout_rate": 0,
+        "stddev_noise": 0
+    },
+
+    "test": {
+        "img_path": "/media/vahid/96CC807ACC805701/Joe/July6/testImages"
+    },
+    
+    "preprocess": {
+        "method": "rng",
+        "synth_folder": "Synth",
+        "synthetic": false,
+        "rotate": false,
+        "scale": 0,
+        "blur": 0,
+        "small_patch":  false
+    }
+}

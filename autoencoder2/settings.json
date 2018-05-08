@@ -1,0 +1,46 @@
+{
+    "data_path": "/work/baskargroup/vahid/tasselSegmentation/bagOfFeaturDataSet/tasselTrainingSet/cameraAllGoodBagRGBNegativeJ",
+    "weights_file": "./small_patch_weightsCheck.h5", 
+    "model": "cae",
+    "patch_size": 256,
+    "verbosity": 5,
+
+    "train": {
+        "nb_epochs": 10,
+        "batch_size": 8,
+        "report_samples": 16,
+
+        "num_gen": 4,
+        "preload_max": 16,
+
+        "img_folder": "Input",
+        "img_ext": "JPG",
+        "lbl_folder": "Label_Thresh",
+        "lbl_ext": "png"
+    },
+
+    "hyperparams": {
+        "in_ch": 3,
+        "out_ch": 1,
+        "num_filt": 64,
+        "dropout_rate": 0,
+        "stddev_noise": 0
+    },
+
+    "test": {
+        "img_path": "/ptmp/baskargroup/vahid/tasselSegmentation/bagOfFeaturDataSet/trainingFolder/cameraAllGoodBagRGBNegativeJ/boxImages2016",
+        "img_save": "/ptmp/baskargroup/vahid/tasselSegmentation/bagOfFeaturDataSet/trainingFolder/cameraAllGoodBagRGBNegativeJ/3/testImageSave"
+
+
+    },
+    
+    "preprocess": {
+        "method": "rng",
+        "synth_folder": "Synth",
+        "synthetic": false,
+        "rotate": false,
+        "scale": 0,
+        "blur": 0,
+        "small_patch":  true
+    }
+}
